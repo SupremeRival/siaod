@@ -1,35 +1,30 @@
 #include <iostream>
 using namespace std;
-
 const int N = 10;
 int A[N];
 int M = 0, C = 0;
-
+//1st lab
 void FillInc(int A[], int N) {
     for (int i = 0; i < N; i++)
         A[i] = i + 1;
 }
-
 void FillDec(int A[], int N) {
     int x = N;
     for (int i = 0; i < N; i++) {
         A[i] = x--;
     }
 }
-
 void FillRand(int A[], int N) {
     srand(time(NULL));
     for (int i = 0; i < N; i++)
         A[i] = rand() % 10 + 1;
 }
-
 int CheckSum() {
     int y = 0;
     for (int i = 0; i < N; i++)
         y += A[i];
     return y;
 }
-
 int RunNumber() {
     int count = 0;
     for (int i = 0; i < N-1; i++) {
@@ -40,13 +35,11 @@ int RunNumber() {
     count += 1;
     return count;
 }
-
 void PrintMas() {
     for (int i = 0; i < N; i++)
         cout << A[i] << " ";
     cout << endl;
 }
-
 void SelectSort(int array[], int size) { 
     M = 0, C = 0;
     for (int i = 0; i < size - 1; i++) {
@@ -61,7 +54,6 @@ void SelectSort(int array[], int size) {
                 M += 3;
     }
 }
-
 void BubbleSort(int array[], int size) { 
     M = 0, C = 0;
     for (int i = 0; i < size - 1; i++) {
@@ -74,7 +66,6 @@ void BubbleSort(int array[], int size) {
         }
     }
 }
-
 void ShakerSort(int array[], int size) {
     M = 0, C = 0;
     int Left = 0, Right = size - 1, k = size - 1;
@@ -106,6 +97,7 @@ int main() {
     FillInc(A, N);
     PrintMas();
     cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "\nDECREASING MASSIVE\n";
     SelectSort(A, N);
     PrintMas();
     cout << CheckSum() << endl << RunNumber() << endl;
@@ -176,10 +168,10 @@ int main() {
     cout << CheckSum() << endl << RunNumber() << endl;
     cout << "Fakticheskie M = " << M << " C = " << C << endl;
     cout << "Theoretical: M = " << 3 * ((N * N - N) / 2) << " C = " << (N * N - N) / 2;
-    cout << "\nRANDOM MASSIVE\n";
+    cout << "\n\nRANDOM MASSIVE\n";
     FillRand(A, N);
     PrintMas();
-    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << CheckSum() << endl << RunNumber() << endl; 
     ShakerSort(A, N);
     PrintMas();
     cout << CheckSum() << endl << RunNumber() << endl;
