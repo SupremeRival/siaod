@@ -101,17 +101,88 @@ void ShakerSort(int array[], int size) {
 }
 
 int main() {
+    //2nd lab
     cout << "INCREASING MASSIVE\n";
     FillInc(A, N);
     PrintMas();
     cout << CheckSum() << endl << RunNumber() << endl;
-
-    cout << "\nDECREASING MASSIVE\n";
+    SelectSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl; 
+    cout << "Theoretical: M = " << 3 * (N - 1) << " C = " << (N * N - N) / 2;
+    cout << "\n\nDECREASING MASSIVE\n";
     FillDec(A, N);
     PrintMas();
     cout << CheckSum() << endl << RunNumber() << endl;
-
+    SelectSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl;
+    cout << "Theoretical: M = " << 3 * (N - 1) << " C = " << (N * N - N) / 2;
+    cout << "\n\nRANDOM MASSIVE\n\n";
+    FillRand(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    SelectSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl;
+    cout << "Theoretical: M = " << 3 * (N - 1) << " C = " << (N * N - N) / 2;
+    //3d lab
+    cout << "\n\n\nINCREASING MASSIVE\n";
+    FillInc(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    BubbleSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Theoretical: M = " << 0 << " C = " << (N*N - N)/2;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl; 
+    cout << "\n\nDECREASING MASSIVE\n";
+    FillDec(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    BubbleSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl; 
+    cout << "Theoretical: M = " << 3*((N*N - N)/2) << " C = " << (N*N - N)/2;
+    cout << "\n\nRANDOM MASSIVE\n";
+    FillRand(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    BubbleSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl; 
+    cout << "Theoretical: M = " << (3*((N*N - N)/2))/2 << " C = " << (N*N - N)/2; 
+    //4th lab
+    cout << "\n\nINCREASING MASSIVE\n";
+    FillInc(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    ShakerSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl;
+    cout << "Theoretical: M = " << 0 << " C = " << (N * N - N) / 2;
+    cout << "\n\nDECREASING MASSIVE\n";
+    FillDec(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    ShakerSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl;
+    cout << "Theoretical: M = " << 3 * ((N * N - N) / 2) << " C = " << (N * N - N) / 2;
     cout << "\nRANDOM MASSIVE\n";
     FillRand(A, N);
     PrintMas();
-    cout << CheckSum() << endl << RunNumber() << endl; }
+    cout << CheckSum() << endl << RunNumber() << endl;
+    ShakerSort(A, N);
+    PrintMas();
+    cout << CheckSum() << endl << RunNumber() << endl;
+    cout << "Fakticheskie M = " << M << " C = " << C << endl;
+    cout << "Theoretical: M = " << (3 * ((N * N - N) / 2)) / 2 << " C = " << (N * N - N) / 2;
+}
